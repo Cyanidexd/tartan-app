@@ -15,11 +15,32 @@
         EMP-T
     </div>
     <div class="messagor">
-        <input id="msgboxer" type="text" class="form-control" placeholder="Message" id="inputDefault"><button id="btnEnd" type="button" class="btn btn-info">Send</button>
+        <input id="msgboxer" type="text" class="form-control" placeholder="Message" id="inputDefault"><button onclick="getmsgs()" type="button" class="btn btn-info">Send</button>
     </div>
     <script>
     // You can also require other files to run in this process
     require('./renderer.js')
   </script>
+    <script>
+        function getmsgs() {
+    // Creating the XMLHttpRequest object
+    var request = new XMLHttpRequest();
+
+    // Instantiating the request object
+    request.open("GET", "http://tartanserver.herokuapp.com/feed.php");
+
+    // Defining event listener for readystatechange event
+    request.onreadystatechange = function() {
+        // Check if the request is compete and was successful
+        if(this.readyState === 4 && this.status === 200) {
+            // Inserting the response from server into an HTML element
+            document.getElementById("affic").innerHTML = this.responseText;
+        }
+    };
+
+    // Sending the request to the server
+    request.send();
+}
+    </script>
   </body>
 </html>
