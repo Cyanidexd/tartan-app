@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="theme.css">
   </head>
   <body>
+    <button onclick="getmsgs()" type="button" class="btn btn-primary btn-lg btn-block">Refresh</button>
     <div class="messages" id="affic">
-        EMP-T
+        Loading messages...
     </div>
     <div class="messagor">
         <input id="msgboxer" type="text" class="form-control" placeholder="Message" id="inputDefault"><button onclick="sendmsg()" type="button" class="btn btn-info">Send</button>
@@ -34,7 +35,8 @@
         // Check if the request is compete and was successful
         if(this.readyState === 4 && this.status === 200) {
             // Inserting the response from server into an HTML element
-            document.getElementById("affic").innerHTML = this.responseText;
+            document.getElementById("affic").innerHTML = this.responseText+'<div id="endero"></div>';
+            window.location = "#endero";
         }
     };
 
@@ -62,6 +64,7 @@ if(this.readyState === 4 && this.status === 200) {
 // Sending the request to the server
 request.send();
 }
+getmsgs();
     </script>
   </body>
 </html>
