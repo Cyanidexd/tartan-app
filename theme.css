@@ -57,6 +57,14 @@
 	padding:45px;
 }
 
+.messagor {
+  position: fixed;
+	display: flex;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+}
+
 html {
 	font-family: sans-serif;
 	line-height: 1.15;
