@@ -38,7 +38,9 @@
             // Inserting the response from server into an HTML element
             var dummyEl = document.getElementById('msgboxer');
             var isFocused = (document.activeElement === dummyEl);
-            if(isFocused){
+            var dummyElo = document.getElementById('userboxer');
+            var isFocusedo = (document.activeElement === dummyElo);
+            if(isFocused || isFocusedo){
               console.log("Fokus");
             }else{
             document.getElementById("affic").innerHTML = this.responseText+'<div id="endero"></div>';
