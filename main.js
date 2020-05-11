@@ -10,7 +10,7 @@ function createWindow () {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     },
-    icon: __dirname + '/icon.png'
+    icon: __dirname + '/icon.ico'
   })
 
   // and load the index.html of the app.
