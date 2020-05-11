@@ -1,14 +1,17 @@
 {
   "name": "Tartan",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Tartan Messenger",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "author": "Boutaib Ghali Omar and Amine Magouh",
   "license": "The Unlicense",
   "devDependencies": {
-    "electron": "^8.2.5"
+    "electron": "^8.2.5",
+    "electron-builder": "^22.6.0"
   }
 }
