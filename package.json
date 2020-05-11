@@ -15,9 +15,9 @@
     "electron-builder": "^22.6.0"
   },
   "build": {
-  "appId": "com.tartan.messenger",
-  "mac": {
-    "category": "social"
-  }
+    "appId": "com.tartan.messenger",
+    "mac": {
+      "category": "public.app-category.entertainment"
+    }
   }
 }
