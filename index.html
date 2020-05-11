@@ -34,6 +34,7 @@
     request.onreadystatechange = function() {
         // Check if the request is compete and was successful
         if(this.readyState === 4 && this.status === 200) {
+            document.getElementById("affic").innerHTML = this.responseText+'<div id="endero"></div>';
             // Inserting the response from server into an HTML element
             var dummyEl = document.getElementById('msgboxer');
             var isFocused = (document.activeElement === dummyEl);
@@ -42,9 +43,8 @@
             if(isFocused || isFocusedo){
               console.log("Fokus");
             }else{
-            document.getElementById("affic").innerHTML = this.responseText+'<div id="endero"></div>';
-            window.location = "#endero";
-          }
+              window.location = "#endero";
+            }
         }
     };
 
